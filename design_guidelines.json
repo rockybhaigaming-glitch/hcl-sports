@@ -1,0 +1,82 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) customized with HCLTech Branding",
+  "branding": {
+    "name": "HCLTech Sports Booking",
+    "description": "An internal corporate sports facility booking platform for HCLTech employees. Emphasizes clarity, frictionless booking, and the brand's vibrant purple-to-blue gradient."
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F4F5F7",
+    "surface_glass": "rgba(255, 255, 255, 0.8)",
+    "primary": "#0578C3",
+    "gradient_primary": "linear-gradient(135deg, #5F1EBE 0%, #0578C3 100%)",
+    "gradient_tailwind": "bg-gradient-to-r from-[#5F1EBE] to-[#0578C3]",
+    "text_main": "#0D0D0D",
+    "text_muted": "#5F5F5F",
+    "border": "#E5E7EB",
+    "success": "#10B981",
+    "error": "#EF4444",
+    "warning": "#F59E0B"
+  },
+  "typography": {
+    "heading_font": "Outfit, sans-serif",
+    "body_font": "Manrope, sans-serif",
+    "heading_strategy": "High contrast, bold weights for key metrics and page titles. Tracking tight on large text (-0.02em).",
+    "body_strategy": "Clean, highly legible text for data grids and schedules."
+  },
+  "layout": {
+    "spacing_system": "Tailwind standard (p-2, p-4, p-6, p-8). Generous padding for form fields and cards to prevent clutter.",
+    "grid_strategy": "Bento-style grids for the admin dashboard (e.g., metric cards, recent bookings). For the booking UI, use a structured CSS grid for the 7AM-10PM hourly slots (e.g., grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3).",
+    "card_style": "Minimalist. 1px solid border (#E5E7EB), no heavy drop shadows unless hovered (shadow-sm to shadow-md transition). Rounded corners (rounded-xl)."
+  },
+  "components": {
+    "buttons": {
+      "primary": "Solid gradient background (from-[#5F1EBE] to-[#0578C3]) with white text, rounded-md, hover:opacity-90 transition-opacity.",
+      "secondary": "White background, 1px border (#E5E7EB), text_main color, hover:bg-gray-50.",
+      "danger": "Red background or red outline for cancellation actions."
+    },
+    "inputs": {
+      "style": "Clean outlines (border-gray-300), focus ring with primary brand color (focus:ring-[#0578C3]), rounded-md."
+    },
+    "time_slots": {
+      "available": "White background, thin border, text-gray-700, hover:border-[#0578C3].",
+      "selected": "Gradient background (from-[#5F1EBE] to-[#0578C3]), white text, bold.",
+      "booked_or_blocked": "Gray background (#F3F4F6), text-gray-400, cursor-not-allowed, opacity-50."
+    },
+    "navigation": {
+      "style": "Sticky top nav with crystal glassmorphism (backdrop-blur-md bg-white/80). Includes Logo/Brand name and user profile."
+    }
+  },
+  "interactions_and_motion": {
+    "hover_states": "All clickable elements must have a distinct hover state (color shift or slight translate-y).",
+    "transitions": "Use 'transition-all duration-200 ease-in-out' for standard interactions.",
+    "loading": "Subtle skeleton loaders or a spinner adopting the brand gradient."
+  },
+  "accessibility_and_testing": {
+    "contrast": "Ensure text over gradients meets APCA/WCAG standards (use white text on the purple-blue gradient).",
+    "testing": "CRITICAL: Add 'data-testid' attributes to all interactive elements (e.g., data-testid='login-button', data-testid='book-slot-7am', data-testid='cancel-booking-btn')."
+  },
+  "media": {
+    "logos": {
+      "brand_gradient_reference_1": "https://customer-assets.emergentagent.com/job_eac11c9e-24f7-41ff-a6cd-335ae334f010/artifacts/5vsttpf7_image.png",
+      "brand_gradient_reference_2": "https://customer-assets.emergentagent.com/job_eac11c9e-24f7-41ff-a6cd-335ae334f010/artifacts/cznkroka_image.png"
+    },
+    "sports_images": {
+      "cricket": "https://images.pexels.com/photos/24394759/pexels-photo-24394759.jpeg",
+      "basketball": "https://images.pexels.com/photos/5407033/pexels-photo-5407033.jpeg",
+      "badminton": "https://images.pexels.com/photos/3660204/pexels-photo-3660204.jpeg",
+      "volleyball": "https://images.pexels.com/photos/32602955/pexels-photo-32602955.jpeg"
+    },
+    "usage_instructions": "Use sports images as rich headers or cards when a user selects a ground. Use the brand gradient references to sample exact CSS colors or as background textural elements on the login page."
+  },
+  "instructions_to_main_agent": [
+    "Install and use 'Outfit' and 'Manrope' fonts from Google Fonts.",
+    "Use Lucide-React for icons (calendar, clock, user, settings, trash).",
+    "Enforce the 2 slots per day per person logic in the UI layer visually (disable booking if max reached).",
+    "Build the Admin Dashboard to allow slot release (Friday 11 AM logic can be manual toggle or scheduled UI representation), view all bookings, and block slots for maintenance.",
+    "For the login view, require 'Employee ID' and 'Employee Name'.",
+    "Ensure the HCLTech purple-to-blue gradient is prominently used for primary CTA buttons and active states."
+  ]
+}
+
