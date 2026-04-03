@@ -13,7 +13,7 @@ import {
 import Navbar from "@/components/Navbar";
 import { toast } from "sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://hcl-sports.onrender.com";
 const API = `${BACKEND_URL}/api`;
 
 export default function AdminReports({ user, onLogout }) {
