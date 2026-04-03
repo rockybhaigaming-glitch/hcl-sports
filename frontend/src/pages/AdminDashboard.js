@@ -7,7 +7,7 @@ import { format, addDays } from "date-fns";
 import { CalendarCheck, Users, TrendingUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://hcl-sports.onrender.com";
 const API = `${BACKEND_URL}/api`;
 
 export default function AdminDashboard({ user, onLogout }) {
