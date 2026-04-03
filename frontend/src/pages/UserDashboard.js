@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import { format } from "date-fns";
 import Navbar from "@/components/Navbar";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://hcl-sports.onrender.com";
 const API = `${BACKEND_URL}/api`;
 
 const SPORTS_DATA = [
